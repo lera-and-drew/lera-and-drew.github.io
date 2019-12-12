@@ -42,6 +42,46 @@
         margin-top:0px;
         margin-bottom:0px; 
     }
+    .grid-container {
+                      border:2px solid black;
+                      width:600px;
+                      height: 75vh;
+                      display: grid;
+                      grid-template-columns: repeat(4, 1fr);
+                      grid-template-rows: repeat(5, 1fr);
+                      grid-column-gap: 10px;
+                      grid-row-gap: 10px;
+                      background-color:#F08080;
+                    }
+                    .special-item {
+                        grid-column-start: 1;
+                        grid-column-end: 4;
+                        padding: 1em;
+                     }
+
+                    .grid-item {
+                        border:1px solid black;
+                      text-align: center;
+                      display:block;
+                      font-size: 1.5em;
+                      color: white;
+                      background-color:#F08080;
+                    }
+                    input{
+                        display:block;
+                        border:0px;
+                        color:white;
+                        font-size:1.3em;
+                        width:100%;
+                        height:10%;
+                        text-decoration: none;
+                        background-color:#F08080;
+                    }
+                    #S,#C{
+                      display:block;
+                      height:100%;
+                      font-size:1em;
+                    }
     @media screen and (min-width: 610px) {
         H1{
             color:white;
@@ -62,6 +102,21 @@
         }
     }
 </style>
+<script>
+        function func(elem){
+          var elem1 = document.getElementById('res');
+          elem1.value +=elem.value;
+          elem1.disabled=true;
+        }
+        function func1(){
+          var elem1 = document.getElementById('res');
+          elem1.value = '';
+        }
+        function func2(){
+          var elem1 = document.getElementById('res');
+          elem1.value += '=' + eval(elem1.value);
+        }
+</script>
 </head>
 <body>
     <center>
@@ -96,6 +151,29 @@
     _________________________________________________________________________________________________
     -->
     <!--Писать под этой написью-->
+    <b>22:25 12.12.2019</b> <br> 
+    Модный кальукулятор для принцесс<br>
+    <div class="grid-container" >
+            <div class="grid-item special-item"><input type="text" value="" id="res"></div>
+            <div class="grid-item" ><input type="button" onclick="func1()" value="C" id="C"></div>
+            <div class="grid-item"><input type="button" onclick="func(this)" value="7" id="S"></div>
+            <div class="grid-item" ><input type="button" onclick="func(this)" value="8" id="S"></div>
+            <div class="grid-item "><input type="button" onclick="func(this)" value="9" id="S"></div>
+            <div class="grid-item " ><input type="button" onclick="func(this)" value="/" id="S"></div>
+            <div class="grid-item " ><input type="button" onclick="func(this)" value="4" id="S"></div>
+            <div class="grid-item " ><input type="button" onclick="func(this)" value="5" id="S"></div>
+            <div class="grid-item " ><input type="button" onclick="func(this)" value="6" id="S"></div>
+            <div class="grid-item " ><input type="button" onclick="func(this)" value="*" id="S"></div>
+            <div class="grid-item " ><input type="button" onclick="func(this)" value="1" id="S"></div>
+            <div class="grid-item " ><input type="button" onclick="func(this)" value="2" id="S"></div>
+            <div class="grid-item " ><input type="button" onclick="func(this)" value="3" id="S"></div>
+            <div class="grid-item " ><input type="button" onclick="func(this)" value="-" id="S"></div>
+            <div class="grid-item "><input type="button" onclick="func(this)" value="0" id="S"></div>
+            <div class="grid-item " ><input type="button" onclick="func(this)" value="." id="S"></div>
+            <div class="grid-item " ><input type="button" onclick="func2()" value="=" id="S"></div>
+            <div class="grid-item " ><input type="button" onclick="func(this)" value="+" id="S"></div>
+    </div>
+    </p><p>
     <b>14:30 2.12.2019</b> <br> 
     Вчера Дрюля подарил мне самый лучший подарок и сводил в лучшую чайную!<br>
     </p><p class="new"><img src="https://sun9-35.userapi.com/c858520/v858520576/73b35/u8pDLdEXyDY.jpg" width="600"><br></p><p>
