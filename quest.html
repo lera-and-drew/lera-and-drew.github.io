@@ -1,0 +1,67 @@
+<html>
+    <head>
+
+        <style>
+        body,html{
+            margin:0em;
+            padding:0em;
+            font-size: 25px;
+        }
+        </style>
+        <script>
+            var i=0;
+        function func() {
+            i++;
+            if(i==1){
+            alert('Красава');
+            var elem = document.getElementById('memo');
+	        //elem.value  = '2.найдите фару';
+            elem.outerHTML = '<div id="memo" style="border: 2px solid black; width:15%; height:25%;position: fixed;bottom: 70%; right: 80%;background:white;">2.Нажми на коленку ближнюю к тебе</div>';
+            }
+            if(i==2){
+            alert('Красава,еще одна просьба');
+            var elem = document.getElementById('memo');
+	        //elem.value = '3.найдите номер';
+            elem.outerHTML = '<div id="memo" style="border: 2px solid black; width:15%; height:25%;position: fixed;bottom: 70%; right: 80%;background:white;">3.Нажми на глазик, правый от тебя</div>';
+            }
+            if(i==3){
+            alert('ТЫ ПОБЕДИЛА!');
+            var elem = document.getElementById('foto');
+            elem.outerHTML = ' <video autoplay height=100% width=100%><source src="win.mp4" ></video>';
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <div id="foto" >
+        <img src="lera.jpg" height=100% width=100% >
+            <div onclick="func()" style="
+            border: 0px solid black; 
+            width:1%; 
+            height:1.4%;
+            position: fixed;
+            bottom: 78%;
+            right: 29.4%;">
+
+            </div>
+            <div onclick="func()" style="
+            border: 0px solid black; 
+            width:1%; 
+            height:2.4%;
+            position: fixed;
+            bottom: 76%;
+            right: 31%;">
+
+            </div>
+            <div  onclick="func()" style="
+            border: 0px solid black; 
+            width:5%; 
+            height:5%;
+            position: fixed;
+            bottom: 1%;
+            right: 29%;">
+            </div>
+            <div id="memo" style="border: 2px solid black; width:15%; height:25%;position: fixed;bottom: 70%; right: 80%; background:white; ">1.Нажми на носик</div>
+        </div>
+    </body>
+</html>
